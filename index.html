@@ -1,210 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ariana Giselle Ludeña Verdugo - Portafolio</title>
-  <!-- Tipografías: Dancing Script (Manuscrita), Instrument Serif y Plus Jakarta Sans -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio | Desarrollador Web</title>
+  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Barra de navegación flotante superior -->
-  <header class="top-nav-container">
-    <nav class="top-nav">
-      <div class="nav-logo">AL</div>
+  <!-- Navegación -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="#" class="logo">&lt;<span>MiPortafolio</span> /&gt;</a>
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#contacto" class="btn-nav">Contacto</a></li>
       </ul>
-      <div class="mode-badge">
-        <span class="dot"></span> Modo claro
-      </div>
     </nav>
   </header>
 
-  <main class="main-container">
+  <!-- Sección Hero / Inicio -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <span class="badge">👋 Bienvenido a mi espacio creativo</span>
+      <h1>Desarrollador Web <br/><span class="gradient-text">&amp; Creador Digital</span></h1>
+      <p>Transformo ideas complejas en experiencias web modernas, rápidas e interactivas.</p>
+      <div class="hero-buttons">
+        <a href="#proyectos" class="btn btn-primary">Ver mis trabajos</a>
+        <a href="#contacto" class="btn btn-secondary">Hablar conmigo</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- SECCIÓN HERO / PRESENTACIÓN -->
-    <section class="hero-grid" id="inicio">
-      <!-- Columna Izquierda: Presentación -->
-      <div class="hero-main">
-        <span class="sub-tag">ESTUDIANTE DE COMPUTACIÓN · PRIMER CICLO</span>
-        <h1 class="hero-title hero-handwritten">Ariana Giselle Ludeña Verdugo</h1>
-        <p class="hero-subtitle">Apasionada por la lógica, la tecnología y la resolución de problemas</p>
-        <p class="hero-description">
-          Soy estudiante de Computación en la Universidad Politécnica Salesiana. Me gustan los retos, aprender cosas nuevas y usar la lógica para descubrir el potencial de la tecnología.
-        </p>
-        <div class="hero-buttons">
-          <a href="#contacto" class="btn btn-primary">Contactar</a>
-          <a href="#sobre-mi" class="btn btn-secondary">Ver perfil</a>
+  <!-- Sección Sobre Mí -->
+  <section id="sobre-mi" class="section">
+    <div class="container">
+      <h2 class="section-title">Sobre <span>Mí</span></h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>🚀 Quién soy</h3>
+          <p>Apasionado por la tecnología y la creación de interfaces web atractivas. Me enfoco en escribir código limpio, accesible y optimizado para una experiencia de usuario impecable.</p>
+        </div>
+        <div class="about-card">
+          <h3>🎯 Mi Objetivo</h3>
+          <p>Construir soluciones digitales efectivas que destaquen visualmente y ayuden a marcas y personas a alcanzar sus metas en la web.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Columna Derecha: Tarjeta Perfil Profesional -->
-      <div class="card profile-card">
-        <span class="badge badge-warning">DISPONIBLE PARA PROYECTOS</span>
-        <div class="avatar-box">AL</div>
-        <h3 class="profile-name">Perfil Profesional</h3>
-        <p class="profile-desc">En constante aprendizaje, explorando el desarrollo con lógica, creatividad y perseverancia.</p>
-        <div class="profile-details">
-          <p>📍 Ecuador</p>
-          <p>✉️ <a href="mailto:ludenaariana6@gmail.com" class="profile-link">ludenaariana6@gmail.com</a></p>
-          <div class="social-links-pills">
-            <a href="https://github.com/settings/profile" target="_blank" class="badge">GitHub</a>
-            <a href="https://www.instagram.com/arilu_ve_16?stkn=MXA3dzJxaTEyZW9wdw==" target="_blank" class="badge">Instagram</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fila de Tarjetas de Estadísticas / Rápida Información -->
-      <div class="stats-row">
-        <div class="card stat-card">
-          <span class="stat-number">1er</span>
-          <span class="stat-label">Ciclo de Computación</span>
-        </div>
-        <div class="card stat-card">
-          <span class="stat-number">C1</span>
-          <span class="stat-label">Nivel de Inglés</span>
-        </div>
-        <div class="card stat-card">
-          <span class="stat-number">3</span>
-          <span class="stat-label">Idiomas (ES / EN / FR)</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN SOBRE MÍ -->
-    <section class="section" id="sobre-mi">
-      <span class="sub-tag">SOBRE MÍ</span>
-      <h2 class="section-heading">Curiosidad, lógica y visión de futuro</h2>
-
-      <div class="cards-3-col">
-        <div class="card">
-          <h3 class="card-title">Quién soy</h3>
-          <p class="card-text">
-            Soy Ariana, estudiante de Computación. Elegí esta carrera porque siempre me ha gustado aprender cosas nuevas y descubrir cómo funcionan las cosas. Me llaman la atención los retos y la posibilidad de encontrar diferentes formas de resolver un problema. Aunque todavía estoy empezando en el mundo de la programación, quiero aprovechar la carrera para descubrir todo lo que puedo llegar a hacer con la tecnología.
-          </p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Cualidades y Valores</h3>
-          <p class="card-text">
-            Disciplinada, perseverante y muy trabajadora. Me adapto con suma facilidad a nuevos entornos, no me rindo pronto ante los problemas y aplico un enfoque creativo para encontrar soluciones.
-          </p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Intereses Personales</h3>
-          <ul class="interests-list">
-            <li>🥊 Deportes (Boxeo y MMA)</li>
-            <li>♫ Música (Guitarra acústica, eléctrica y piano)</li>
-            <li>📖 Leer y escribir 📝</li>
-            <li>✎ Estudiar y aprender cosas nuevas ✨</li>
-            <li>✈︎ Idiomas y ➗ Matemática aplicada</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN FORMACIÓN Y CERTIFICACIONES -->
-    <section class="section" id="formacion">
-      <span class="sub-tag">FORMACIÓN Y CERTIFICACIONES</span>
-      <h2 class="section-heading">Logros académicos y reconocimientos</h2>
-
-      <div class="stacked-list">
-        <div class="card list-item-card">
-          <span class="badge">UNIVERSIDAD</span>
-          <div>
-            <h3 class="item-title">Universidad Politécnica Salesiana</h3>
-            <p class="item-sub">Estudiante de Primer Ciclo en la Carrera de Computación.</p>
+  <!-- Sección Proyectos -->
+  <section id="proyectos" class="section">
+    <div class="container">
+      <h2 class="section-title">Proyectos <span>Destacados</span></h2>
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <div class="project-img-placeholder">💻</div>
+          <div class="project-info">
+            <h3>Plataforma Web Interactiva</h3>
+            <p>Aplicación web moderna con diseño responsivo, navegación fluida e integración de APIs.</p>
+            <div class="tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            </div>
           </div>
         </div>
 
-        <div class="card list-item-card">
-          <span class="badge">CERTIFICACIÓN</span>
-          <div>
-            <h3 class="item-title">Certificación Cambridge English — Nivel C1</h3>
-            <p class="item-sub">Demostrada competencia avanzada e internacional en el idioma inglés.</p>
+        <div class="project-card">
+          <div class="project-img-placeholder">🚀</div>
+          <div class="project-info">
+            <h3>Diseño de Marca & Landing Page</h3>
+            <p>Página de aterrizaje optimizada para conversión con animaciones modernas y diseño adaptativo.</p>
+            <div class="tags">
+              <span>UX/UI</span><span>CSS Grid</span><span>JS</span>
+            </div>
           </div>
         </div>
 
-        <div class="card list-item-card">
-          <span class="badge">CERTIFICACIÓN</span>
-          <div>
-            <h3 class="item-title">Certificación IBEC (International Business E Corporation) — Nivel B1</h3>
-            <p class="item-sub">Acreditación en conocimientos corporativos e institucionales.</p>
+        <div class="project-card">
+          <div class="project-img-placeholder">📊</div>
+          <div class="project-info">
+            <h3>Panel de Control / Dashboard</h3>
+            <p>Interfaz de usuario limpia para monitoreo de datos y métricas clave en tiempo real.</p>
+            <div class="tags">
+              <span>Frontend</span><span>Flexbox</span><span>Git</span>
+            </div>
           </div>
         </div>
 
-        <div class="card list-item-card">
-          <span class="badge">LOGRO MATEMÁTICO</span>
-          <div>
-            <h3 class="item-title">Certificación ESTALMAT — Formación en Matemática Avanzada</h3>
-            <p class="item-sub">Programa de estímulo del talento matemático y razonamiento avanzado.</p>
-          </div>
-        </div>
-
-        <div class="card list-item-card">
-          <span class="badge">RECONOCIMIENTO</span>
-          <div>
-            <h3 class="item-title">Mejor Egresada — Programa ILVEM (Promoción 2020)</h3>
-            <p class="item-sub">Instituto de Lectura Veloz, Estudio y Memoria. Reconocimiento al alto rendimiento académico.</p>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECCIÓN HABILIDADES E IDIOMAS -->
-    <section class="section" id="habilidades">
-      <span class="sub-tag">HABILIDADES Y APTITUDES</span>
-      <h2 class="section-heading">Capacidades técnicas y fortalezas</h2>
-
-      <div class="cards-3-col">
-        <div class="card">
-          <span class="badge font-badge">LÓGICA & CÓDIGO</span>
-          <h3 class="card-title">Programación e Intuición</h3>
-          <p class="card-text">
-            Manejo inicial de Python, resolución sencilla de problemas matemáticos y fuerte lógica matemática para entender procesos técnicos.
-          </p>
-        </div>
-
-        <div class="card">
-          <span class="badge font-badge">APTITUDES</span>
-          <h3 class="card-title">Aprendizaje Rápido</h3>
-          <p class="card-text">
-            Facilidad y adaptación rápida frente a tecnologías o retos desconocidos. Perseverante ante los obstáculos técnicos.
-          </p>
-        </div>
-
-        <div class="card">
-          <span class="badge font-badge">IDIOMAS</span>
-          <h3 class="card-title">Dominio de Idiomas</h3>
-          <ul class="languages-list">
-            <li><strong>🇪🇸 Español:</strong> Nativo</li>
-            <li><strong>🇬🇧 Inglés:</strong> C1 (Avanzado)</li>
-            <li><strong>🇫🇷 Francés:</strong> A2 (Básico)</li>
-          </ul>
-        </div>
+  <!-- Sección Habilidades -->
+  <section id="habilidades" class="section">
+    <div class="container">
+      <h2 class="section-title">Mis <span>Habilidades</span></h2>
+      <div class="skills-grid">
+        <div class="skill-item">HTML5 &amp; CSS3</div>
+        <div class="skill-item">JavaScript (ES6+)</div>
+        <div class="skill-item">Git &amp; GitHub</div>
+        <div class="skill-item">Diseño Responsivo</div>
+        <div class="skill-item">UI / UX Design</div>
+        <div class="skill-item">Despliegue Web (Netlify)</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- FOOTER Y CONTACTO -->
-    <footer class="footer" id="contacto">
-      <h3 class="footer-title">¿Hablamos?</h3>
-      <p class="footer-email">ludenaariana6@gmail.com</p>
-      <div class="footer-socials">
-        <a href="https://github.com/settings/profile" target="_blank">GitHub</a>
-        <a href="https://www.instagram.com/arilu_ve_16?stkn=MXA3dzJxaTEyZW9wdw==" target="_blank">Instagram</a>
-      </div>
-      <p class="copyright">© 2026 Ariana Giselle Ludeña Verdugo — Todos los derechos reservados</p>
-    </footer>
+  <!-- Sección Contacto -->
+  <section id="contacto" class="section">
+    <div class="container contact-box">
+      <h2>¿Tienes un proyecto en mente?</h2>
+      <p>¡Hagámoslo realidad! Mándame un mensaje y conversemos.</p>
+      <a href="mailto:tuemail@ejemplo.com" class="btn btn-primary btn-large">Enviar un Correo</a>
+    </div>
+  </section>
 
-  </main>
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2026 Mi Portafolio. Diseñado y construido con dedicación.</p>
+  </footer>
 
 </body>
 </html>
