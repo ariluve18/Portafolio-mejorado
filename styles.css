@@ -1,0 +1,452 @@
+/* Reseteo general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Fondo general con degradado suave en tonos crema/rosa elegante */
+  background: linear-gradient(135deg, #fdf4f5 0%, #f8fafc 50%, #fcf0f2 100%);
+  background-attachment: fixed;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #3f2d34;
+  line-height: 1.6;
+  padding-bottom: 4rem;
+}
+
+/* NAVEGACIÓN FLOTANTE */
+.top-nav-container {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.top-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(136, 19, 55, 0.1);
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(136, 19, 55, 0.05);
+  max-width: 850px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  background: linear-gradient(135deg, #701a75 0%, #881337 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(112, 26, 117, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #6b555e;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #881337;
+}
+
+.mode-badge {
+  font-size: 0.8rem;
+  color: #881337;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fdf2f4;
+  padding: 0.38rem 0.85rem;
+  border-radius: 20px;
+  border: 1px solid rgba(136, 19, 55, 0.12);
+  font-weight: 600;
+}
+
+.mode-badge .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #be123c;
+  border-radius: 50%;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* TARJETAS ESTILO BENTO */
+.card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(136, 19, 55, 0.08);
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(112, 26, 117, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(136, 19, 55, 0.07);
+}
+
+/* HERO GRID */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hero-main {
+  padding: 1rem 0;
+}
+
+.sub-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #be123c;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+/* NOMBRE EN FUENTE MANUSCRITA */
+.hero-handwritten {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #4c0519 0%, #881337 60%, #9d174d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.6rem;
+}
+
+.hero-subtitle {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.45rem;
+  color: #701a75;
+  margin-bottom: 1.2rem;
+}
+
+.hero-description {
+  color: #6b555e;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 1.4rem;
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #701a75 0%, #881337 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(136, 19, 55, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #581c87 0%, #701a75 100%);
+  box-shadow: 0 6px 18px rgba(112, 26, 117, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #881337;
+  border: 1px solid rgba(136, 19, 55, 0.2);
+}
+
+.btn-secondary:hover {
+  background-color: #fdf2f4;
+  border-color: #881337;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #fffbfb 100%);
+}
+
+.avatar-box {
+  width: 58px;
+  height: 58px;
+  background: linear-gradient(135deg, #881337 0%, #be123c 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 6px 16px rgba(136, 19, 55, 0.2);
+}
+
+.profile-name {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #4c0519;
+}
+
+.profile-desc {
+  font-size: 0.88rem;
+  color: #6b555e;
+  margin-bottom: 1.2rem;
+}
+
+.profile-details p {
+  font-size: 0.85rem;
+  color: #581c87;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.profile-link {
+  color: #881337;
+  text-decoration: none;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
+.social-links-pills {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.social-links-pills a {
+  text-decoration: none;
+}
+
+/* STATS ROW */
+.stats-row {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.stat-card {
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #701a75 0%, #be123c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #78626b;
+}
+
+/* BADGES / PÍLDORAS */
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 10px;
+  background-color: #fdf2f4;
+  color: #881337;
+  border: 1px solid rgba(136, 19, 55, 0.12);
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.badge-warning {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  color: #c2410c;
+  border: 1px solid rgba(194, 65, 12, 0.15);
+}
+
+.font-badge {
+  margin-bottom: 0.8rem;
+}
+
+/* LISTAS DENTRO DE TARJETAS */
+.interests-list, .languages-list {
+  list-style: none;
+  font-size: 0.88rem;
+  color: #6b555e;
+}
+
+.interests-list li, .languages-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* SECCIONES */
+.section {
+  margin-bottom: 3.5rem;
+}
+
+.section-heading {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.3rem;
+  font-weight: 400;
+  color: #4c0519;
+  margin-bottom: 1.5rem;
+}
+
+.cards-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.card-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  color: #4c0519;
+}
+
+.card-text {
+  font-size: 0.88rem;
+  color: #6b555e;
+  line-height: 1.5;
+}
+
+/* LISTAS APILADAS */
+.stacked-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-item-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.4rem 1.8rem;
+}
+
+.item-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #4c0519;
+}
+
+.item-sub {
+  font-size: 0.85rem;
+  color: #6b555e;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(136, 19, 55, 0.1);
+}
+
+.footer-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2rem;
+  color: #4c0519;
+}
+
+.footer-email {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #881337;
+  margin: 0.4rem 0 1rem 0;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-socials a {
+  color: #701a75;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.footer-socials a:hover {
+  color: #be123c;
+}
+
+.copyright {
+  color: #a18a93;
+  font-size: 0.8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-row {
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+  }
+  .cards-3-col {
+    grid-template-columns: 1fr;
+  }
+  .top-nav-container {
+    padding: 1rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .hero-handwritten {
+    font-size: 2.8rem;
+  }
+}
